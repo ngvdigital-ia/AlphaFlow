@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AlphaFlow</title>
+
+  <link rel="preconnect" href="https://cdn.utmify.com.br" crossorigin>
+  <link rel="preconnect" href="https://scripts.converteai.net" crossorigin>
+  <link rel="preconnect" href="https://cdn.converteai.net" crossorigin>
+  <link rel="preconnect" href="https://images.converteai.net" crossorigin>
+  <link rel="preconnect" href="https://api.vturb.com.br" crossorigin>
+
+  <!-- Pixel UTMify -->
+  <script>
+    window.pixelId = "";
+    var a = document.createElement("script");
+    a.setAttribute("async", "");
+    a.setAttribute("defer", "");
+    a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+    document.head.appendChild(a);
+  </script>
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #ffffff;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Top Bar - RED */
+    .top-bar {
+      background: #cc0000;
+      color: #ffffff;
+      text-align: center;
+      padding: 12px 16px;
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Main Content */
+    .main-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      background: #ffffff;
+    }
+
+    .video-container {
+      margin: 0 auto;
+      width: 100%;
+      max-width: 900px;
+      padding: 20px 16px 40px;
+    }
+
+    .video-wrapper {
+      width: 100%;
+      height: 0;
+      padding-bottom: 56.25%;
+      position: relative;
+    }
+
+    /* Footer Bar */
+    .footer-bar {
+      background: #1a1a1a;
+      color: #999;
+      text-align: center;
+      padding: 20px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Bottom Footer */
+    .bottom-footer {
+      background: #080303;
+      padding: 32px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .bottom-footer .logo {
+      font-size: 16px;
+      font-weight: 700;
+      color: #ffffff;
+      text-transform: uppercase;
+      line-height: 1.3;
+    }
+
+    .bottom-footer .links {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      text-align: right;
+    }
+
+    .bottom-footer .links a {
+      color: #ffffff;
+      text-decoration: underline;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .bottom-footer .links a:hover {
+      color: #ccc;
+    }
+
+    @media (max-width: 640px) {
+      .top-bar { font-size: 14px; padding: 10px 12px; }
+      .bottom-footer { flex-direction: column; text-align: center; }
+      .bottom-footer .links { text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    THIS VIDEO GOES OFFLINE TODAY, <span id="date"></span>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <div class="video-container">
+      <div class="video-wrapper">
+        <!-- VTurb player será inserido aqui -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Bar -->
+  <div class="footer-bar">
+    ALPHAFLOW &copy; ALL RIGHTS RESERVED
+  </div>
+
+  <!-- Bottom Footer -->
+  <div class="bottom-footer">
+    <div class="logo">ALPHA<br>FLOW</div>
+    <div class="links">
+      <a href="/terms-of-use/">TERMS OF USE</a>
+      <a href="/privacy-policy/">PRIVACY POLICY</a>
+    </div>
+  </div>
+
+  <!-- Date Script -->
+  <script>
+    (function() {
+      var now = new Date();
+      var months = ['01','02','03','04','05','06','07','08','09','10','11','12'];
+      var d = (now.getMonth()+1 < 10 ? '0' : '') + (now.getMonth()+1);
+      var formatted = now.getDate().toString().padStart(2,'0') + '/' + d + '/' + now.getFullYear();
+      document.getElementById('date').textContent = formatted;
+    })();
+  </script>
+
+  <!-- UTMify -->
+  <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-subids async defer></script>
+</body>
+</html>
