@@ -5,11 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AlphaFlow</title>
 
+  <!-- VTurb Preload -->
+  <script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
+  <link rel="preload" href="https://scripts.converteai.net/00c3b583-8874-4e64-a32e-65f6dd9ba521/ab-test/69bda5b4b1f8e9f7f4f2933c/player.js" as="script">
+  <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
+  <link rel="dns-prefetch" href="https://cdn.converteai.net">
+  <link rel="dns-prefetch" href="https://scripts.converteai.net">
+  <link rel="dns-prefetch" href="https://images.converteai.net">
+  <link rel="dns-prefetch" href="https://m3u8.vturb.net">
+  <link rel="dns-prefetch" href="https://api.vturb.com.br">
   <link rel="preconnect" href="https://cdn.utmify.com.br" crossorigin>
-  <link rel="preconnect" href="https://scripts.converteai.net" crossorigin>
-  <link rel="preconnect" href="https://cdn.converteai.net" crossorigin>
-  <link rel="preconnect" href="https://images.converteai.net" crossorigin>
-  <link rel="preconnect" href="https://api.vturb.com.br" crossorigin>
 
   <!-- Pixel UTMify -->
   <script>
@@ -138,7 +143,8 @@
   <div class="main-content">
     <div class="video-container">
       <div class="video-wrapper">
-        <!-- VTurb player será inserido aqui -->
+        <vturb-smartplayer id="ab-69bda5b4b1f8e9f7f4f2933c" style="display: block; margin: 0 auto; width: 100%;"></vturb-smartplayer>
+        <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/00c3b583-8874-4e64-a32e-65f6dd9ba521/ab-test/69bda5b4b1f8e9f7f4f2933c/player.js", s.async=!0,document.head.appendChild(s); </script>
       </div>
     </div>
   </div>
